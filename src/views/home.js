@@ -38,6 +38,7 @@ const Home = (props) => {
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
     
+    <body>
     <div id="sample">
         0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
     </div>
@@ -45,15 +46,12 @@ const Home = (props) => {
       
     <button onclick="copyText()">Copy</button>
     <br />
-    
-    <script>
-        function copyText() {
       
-            /* Copy text into clipboard */
+function copyText() {
             navigator.clipboard.writeText
                 ("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3");
         }
-    </script>
+  
             <div className="home-container1">
               <button className="button button-gradient">Copy</button>
             </div>
