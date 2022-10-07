@@ -46,6 +46,14 @@ const Home = (props) => {
 <button onclick="copyToClipboard('#p2')">Copy TEXT 2</button>
     <br/><br/><input class="textBox" type="text" id="" placeholder="Dont belive me?..TEST it here..;)" />
 </center>
+    
+    function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
 
     
             <div className="home-container1">
