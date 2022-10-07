@@ -11,7 +11,7 @@ const Home = (props) => {
         <title>Bear Case</title>
         <meta property="og:title" content="Bear Case" />
       </Helmet>
-      <div className="navbar-container">
+      <div className="home-navbar navbar-container">
         <div className="max-width">
           <div className="home-logo">
             <img
