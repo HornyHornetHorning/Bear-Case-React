@@ -37,6 +37,16 @@ const Home = (props) => {
             <button className="home-button button button-transparent">
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
+    
+    <center>
+<p id="p1">Hello, I'm TEXT 1</p>
+<p id="p2">Hi, I'm the 2nd TEXT</p><br/>
+
+<button onclick="copyToClipboard('#p1')">Copy TEXT 1</button>
+<button onclick="copyToClipboard('#p2')">Copy TEXT 2</button>
+    
+
+    
             <div className="home-container1">
               <button className="button button-gradient">Copy</button>
             </div>
