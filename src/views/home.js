@@ -38,22 +38,36 @@ const Home = (props) => {
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
     
-    <center>
-<p id="p1">Hello, I'm TEXT 1</p>
-<p id="p2">Hi, I'm the 2nd TEXT</p><br/>
 
-<button onclick="copyToClipboard('#p1')">Copy TEXT 1</button>
-<button onclick="copyToClipboard('#p2')">Copy TEXT 2</button>
-    <br/><br/><input class="textBox" type="text" id="" placeholder="Dont belive me?..TEST it here..;)" />
-</center>
-    
-    function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
+
+
+<input type="text" value="0xef983589FC5af54a5f5864B0B01bac5BE69b04a3" id="myInput">
+
+<div class="tooltip">
+<button onclick="myFunction()" onmouseout="outFunc()">
+  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+  Copy text
+  </button>
+</div>
+
+
+
+
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
 }
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+
 
     
             <div className="home-container1">
