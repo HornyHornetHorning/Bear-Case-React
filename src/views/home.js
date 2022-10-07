@@ -38,7 +38,7 @@ const Home = (props) => {
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
     
-    <body>
+
     <div id="sample">
         0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
     </div>
