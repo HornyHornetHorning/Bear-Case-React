@@ -37,37 +37,6 @@ const Home = (props) => {
             <button className="home-button button button-transparent">
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
-    
-
-    
-<input type="text" value="0xef983589FC5af54a5f5864B0B01bac5BE69b04a3" id="myInput">
-
-<div class="tooltip">
-<button onclick="myFunction()" onmouseout="outFunc()">
-  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-  Copy text
-  </button>
-</div>
-
-
-function myFunction() {
-  var copyText = document.getElementById("myInput");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(copyText.value);
-  
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied: " + copyText.value;
-}
-
-function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
-}
-
-
-
-  
             <div className="home-container1">
               <button className="button button-gradient">Copy</button>
             </div>
