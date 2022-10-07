@@ -42,24 +42,27 @@ const Home = (props) => {
 
 
 
+<div class="colorDiv" id="firstColorObject">
+    <h3 class="colorCode" id="p1" value="123">0xef983589FC5af54a5f5864B0B01bac5BE69b04a3</h3>
+    <div style="opacity:0">
+        <input type="text" id="copyText"/>
+    </div>
+</div>
 
-function copy() {
 
-    var copyText = "0xef983589FC5af54a5f5864B0B01bac5BE69b04a3";
-    var el = document.createElement('textarea');
-    el.value = copyText;
-    el.setAttribute('readonly', '');
-    el.style = {
-        position: 'absolute',
-        left: '-9999px'
-    };
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-}
-  
-  <button onclick="copy()">Copy</button>
+document.querySelector("#firstColorObject").addEventListener("click", function(){
+
+    var p1 = document.getElementById("p1");
+    
+    // set "#Color 1" with the hidden field so that you can call select on it
+    var hiddenField = document.getElementById("copyText");
+    hiddenField.value = p1.innerHTML;
+    hiddenField.select();
+    document.execCommand("copy");
+    
+    alert("Copied the text: " + hiddenField.value);
+
+}, false);
 
     
             <div className="home-container1">
