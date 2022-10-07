@@ -44,7 +44,8 @@ const Home = (props) => {
 
 <button onclick="copyToClipboard('#p1')">Copy TEXT 1</button>
 <button onclick="copyToClipboard('#p2')">Copy TEXT 2</button>
-    
+    <br/><br/><input class="textBox" type="text" id="" placeholder="Dont belive me?..TEST it here..;)" />
+</center>
 
     
             <div className="home-container1">
