@@ -42,7 +42,7 @@ const Home = (props) => {
 
 
 
-
+ const renderItems = () => {
 
 <input id="input" type="text" />
 <button id="execCopy"> execCopy </button>
@@ -52,7 +52,7 @@ function execCopy() {
   document.querySelector("#input").select();
   document.execCommand("copy");
 }
-
+  }
     
             <div className="home-container1">
               <button className="button button-gradient">Copy</button>
