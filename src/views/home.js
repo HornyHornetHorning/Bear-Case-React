@@ -43,7 +43,7 @@ const Home = (props) => {
 
 
  const renderItems = () => {
-
+ <div>
 <input id="input" type="text" />
 <button id="execCopy"> execCopy </button>
 
@@ -52,6 +52,7 @@ function execCopy() {
   document.querySelector("#input").select();
   document.execCommand("copy");
 }
+     </div>
   }
     
             <div className="home-container1">
