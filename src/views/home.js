@@ -42,20 +42,20 @@ const Home = (props) => {
 
 
 
- const renderItems = () => {
+
  <div>
 <input id="input" type="text" />
   
 <button id="execCopy"> execCopy </button>
   </div>
-    
+    return(
 document.getElementById('execCopy').addEventListener('click', execCopy);
 function execCopy() {
   document.querySelector("#input").select();
   document.execCommand("copy");
 }
-   
-  }
+   )
+ 
     
             <div className="home-container1">
               <button className="button button-gradient">Copy</button>
