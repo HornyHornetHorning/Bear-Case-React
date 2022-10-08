@@ -49,20 +49,15 @@ const Home = (props) => {
     </div>
 </div>
 
+<input id="input" type="text" />
+<button id="execCopy"> execCopy </button>
 
-document.querySelector("#firstColorObject").addEventListener("click", function(){
-
-    var p1 = document.getElementById("p1");
-    
-    // set "#Color 1" with the hidden field so that you can call select on it
-    var hiddenField = document.getElementById("copyText");
-    hiddenField.value = p1.innerHTML;
-    hiddenField.select();
-    document.execCommand("copy");
-    
-    alert("Copied the text: " + hiddenField.value);
-
-}, false);
+document.getElementById('execCopy').addEventListener('click', execCopy);
+function execCopy() {
+  document.querySelector("#p1").select();
+  document.execCommand("copy");
+  alert("Copied the Address");
+}
 
     
             <div className="home-container1">
