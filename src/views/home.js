@@ -27,6 +27,8 @@ const Home = (props) => {
           </div>
         </div>
       </div>
+    
+    
       <div className="home-hero hero-container section-container">
         <div className="home-max-width1 max-width">
           <div className="home-content">
@@ -34,12 +36,13 @@ const Home = (props) => {
               Reserve NFT by sending to the address mentioned below
             </span>
             <h1 className="home-title">32 LRC or 0.0069 ETH</h1>
+        <input type="text" value="0xef983589FC5af54a5f5864B0B01bac5BE69b04a3" id="addy">
+<button onclick="myFunction()">Copy text</button>
             <button id="addy2" className="home-button button button-transparent">
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
     
-    <input type="text" value="0xef983589FC5af54a5f5864B0B01bac5BE69b04a3" id="addy">
-<button onclick="myFunction()">Copy text</button>
+
     
             <div className="home-container1">
               <button className="button button-gradient">Copy</button>
