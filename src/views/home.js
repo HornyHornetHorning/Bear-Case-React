@@ -36,7 +36,7 @@ const Home = (props) => {
               Reserve NFT by sending to the address mentioned below
             </span>
             <h1 className="home-title">32 LRC or 0.0069 ETH</h1>
-        <input type="text" value="0xef983589FC5af54a5f5864B0B01bac5BE69b04a3" id="addy">
+        <input type="text" value="0xef983589FC5af54a5f5864B0B01bac5BE69b04a3" id="addy"/>
 <button onclick="myFunction()">Copy text</button>
             <button id="addy2" className="home-button button button-transparent">
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
