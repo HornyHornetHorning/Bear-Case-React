@@ -34,12 +34,6 @@ const Home = (props) => {
               Reserve NFT by sending to the address mentioned below
             </span>
             <h1 className="home-title">32 LRC or 0.0069 ETH</h1>
-    <div class="colorDiv" id="firstColorObject">
-    <h3 class="colorCode" id="p1" value="123">#Color 1</h3>
-    <div style="opacity:0">
-        <input type="text" id="copyText"/>
-    </div>
-</div>
             <button id="addy" className="home-button button button-transparent">
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
