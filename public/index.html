@@ -44,24 +44,21 @@
     <div id="app"></div>
 
     <script>
-Const myBtn = document.getElementById("myBtn");
-myBtn.addEventListener("click", myFunction);
-      function myFunction() {
-        console.log('hi') ;
-        // Get the text field
-        var copyText = document.getElementById("addy");
+      var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
 
-        // Select the text field
-        copyText.select();
-        copyText.setSelectionRange(0, 99999); // For mobile devices
+      copyTextareaBtn.addEventListener('click', function(event) {
+        var copyTextarea = document.querySelector('.js-copytextarea');
+        copyTextarea.focus();
+        copyTextarea.select();
 
-        // Copy the text inside the text field
-        navigator.clipboard.writeText(copyText.value);
-
-        // Alert the copied text
-        alert("Copied the address: " + copyText.value);
-
-      }
+        try {
+          var successful = document.execCommand('copy');
+          var msg = successful ? 'successful' : 'unsuccessful';
+          console.log('Copying text command was ' + msg);
+        } catch (err) {
+          console.log('Oops, unable to copy');
+        }
+      });
     </script>
   </body>
 </html>
