@@ -57,6 +57,8 @@ const popup = document.querySelector(".popup");
 
 text.addEventListener("click", () => {
   popup.classList.add("active");
+});
+  text.addEventListener("click", () => {
   copyToClipBoard();
 });
 popup.addEventListener("animationend", () => {
