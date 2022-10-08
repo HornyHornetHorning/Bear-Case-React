@@ -54,7 +54,7 @@ const Home = (props) => {
 
 document.getElementById('execCopy').addEventListener('click', execCopy);
 function execCopy() {
-  document.querySelector("#p1").select();
+  document.querySelector("input").select();
   document.execCommand("copy");
   alert("Copied the Address");
 }
