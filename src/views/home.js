@@ -42,21 +42,15 @@ const Home = (props) => {
 
 
 
-<div class="colorDiv" id="firstColorObject">
-    <h3 class="colorCode" id="p1" value="123">0xef983589FC5af54a5f5864B0B01bac5BE69b04a3</h3>
-    <div style="opacity:0">
-        <input type="text" id="copyText"/>
-    </div>
-</div>
+
 
 <input id="input" type="text" />
 <button id="execCopy"> execCopy </button>
 
 document.getElementById('execCopy').addEventListener('click', execCopy);
 function execCopy() {
-  document.querySelector("input").select();
+  document.querySelector("#input").select();
   document.execCommand("copy");
-  alert("Copied the Address");
 }
 
     
