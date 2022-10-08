@@ -42,47 +42,23 @@
   </head>
   <body>
     <div id="app"></div>
+
     <script>
-      window.onload = () => {
-        const runAllScripts = () => {
-          initializeAllAccordions()
-        }
+          window.onload = () => {
+      function myFunction() {
+        // Get the text field
+        var copyText = document.getElementById("addy");
 
-        const listenForUrlChanges = () => {
-          let url = location.href
-          document.body.addEventListener(
-            'click',
-            () => {
-              requestAnimationFrame(() => {
-                if (url !== location.href) {
-                  runAllScripts()
-                  url = location.href
-                }
-              })
-            },
-            true
-          )
-        }
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
 
-        const initializeAllAccordions = () => {
-          const allAccordions = document.querySelectorAll('[data-role="Accordion"]');
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
 
-          allAccordions.forEach((accordion) => {
-            const accordionHeader = accordion.querySelector('[data-type="accordion-header"]')
-            const accordionContent = accordion.querySelector('[data-type="accordion-content"]')
-
-            accordionHeader.addEventListener('click', () => {
-              if (accordionContent.style.maxHeight) {
-                accordionContent.style.maxHeight = ''
-              } else {
-                accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`
-              }
-            })
-          })
-        }
-
-        listenForUrlChanges()
-        runAllScripts()
+        // Alert the copied text
+        alert("Copied the address: " + copyText.value);
+      }
       }
     </script>
   </body>
