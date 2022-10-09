@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 
 import './home.css'
 
-function copyText() {
+const onClick = function copyText() {
 	
 			/* Copy text into clipboard */
 			navigator.clipboard.writeText
