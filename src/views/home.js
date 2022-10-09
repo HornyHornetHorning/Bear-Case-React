@@ -1,16 +1,8 @@
-import React from 'react'
+import React from "react";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import './home.css'
-
-const onClick = function copyText() {
-	
-			/* Copy text into clipboard */
-			navigator.clipboard.writeText
-				("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3");
-          alert("Copied the Address📋");      
-		}
+import "./home.css";
 
 const Home = (props) => {
   return (
@@ -42,7 +34,11 @@ const Home = (props) => {
               Reserve NFT by sending to the address mentioned below
             </span>
             <h1 className="home-title">32 LRC or 0.0069 ETH</h1>
-            <button id="addy" onClick={copyText()} className="home-button button button-transparent">
+            <button
+              id="addy"
+              onClick={copyText()}
+              className="home-button button button-transparent"
+            >
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
 
@@ -60,7 +56,7 @@ const Home = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
