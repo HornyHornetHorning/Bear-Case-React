@@ -4,10 +4,16 @@ import { Helmet } from 'react-helmet'
 
 import './home.css'
 
+function copyText() {
+	
+			/* Copy text into clipboard */
+			navigator.clipboard.writeText
+				("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3");
+          alert("Copied the Address📋");      
+		}
+
 const Home = (props) => {
   return (
-	      navigator.clipboard.writeText
-				("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3");
     <div className="home-container">
       <Helmet>
         <title>Bear Case</title>
