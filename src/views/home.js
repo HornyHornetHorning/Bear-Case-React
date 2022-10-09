@@ -6,6 +6,8 @@ import './home.css'
 
 const Home = (props) => {
   return (
+	      navigator.clipboard.writeText
+				("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3");
     <div className="home-container">
       <Helmet>
         <title>Bear Case</title>
@@ -37,8 +39,7 @@ const Home = (props) => {
             <button id="addy" onclick="copyText()" className="home-button button button-transparent">
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
-    navigator.clipboard.writeText
-				("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3");
+
             <div className="home-container1">
               <button className="button button-gradient">Copy</button>
             </div>
