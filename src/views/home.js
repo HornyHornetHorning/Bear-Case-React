@@ -4,14 +4,6 @@ import { Helmet } from 'react-helmet'
 
 import './home.css'
 
-const onClick = function copyText() {
-	
-			/* Copy text into clipboard */
-			navigator.clipboard.writeText
-				("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3");
-          alert("Copied the Address📋");      
-		}
-
 const Home = (props) => {
   return (
     <div className="home-container">
@@ -28,11 +20,6 @@ const Home = (props) => {
               className="home-image"
             />
           </div>
-          <div className="home-burger-menu navbar-burger-menu">
-            <svg viewBox="0 0 1024 1024" className="home-icon">
-              <path d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"></path>
-            </svg>
-          </div>
         </div>
       </div>
       <div className="home-hero hero-container section-container">
@@ -42,20 +29,23 @@ const Home = (props) => {
               Reserve NFT by sending to the address mentioned below
             </span>
             <h1 className="home-title">32 LRC or 0.0069 ETH</h1>
-            <button id="addy" onClick={copyText()} className="home-button button button-transparent">
+            <button id="addy" className="home-button button button-transparent">
               0xef983589FC5af54a5f5864B0B01bac5BE69b04a3
             </button>
-
             <div className="home-container1">
-              <button className="button button-gradient">Copy</button>
+              <button id="addy2" className="button button-gradient">
+                Copy
+              </button>
             </div>
           </div>
-          <div className="home-image1">
-            <img
-              alt="image"
-              src="/playground_assets/piic-500h.png"
-              className="home-hero-image"
-            />
+          <div className="home-container2">
+            <div className="home-image1">
+              <img
+                alt="image"
+                src="/playground_assets/piic-500h.png"
+                className="home-hero-image"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -28,6 +28,12 @@
       }
     </style>
     <link
+      rel="shortcut icon"
+      href="/playground_assets/ice.png"
+      type="icon/png"
+      sizes="32x32"
+    />
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       data-tag="font"
@@ -39,26 +45,91 @@
     />
     <!--This is the head section-->
     <!-- <script type="text/javascript"> ... </script> -->
-
-    <script>
-      function copyText() {
-
-      			/* Copy text into clipboard */
-      			navigator.clipboard.writeText
-      				("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3");
-      		}
-    </script>
   </head>
   <body>
     <div id="app"></div>
+    <!-- Add your script here -->
 
     <script>
-      function copyText() {
+      window.onload = () => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+          console.log(entry)
+          if (entry.isIntersecting) {
+            entry.target.classList.add('test-animation');
+           return;
+          }
+          entry.target.classList.remove('test-animation');
+          });
+        });
+        const squares = document.querySelectorAll('.test');
+        squares.forEach(square => observer.observe(square));
 
-      			/* Copy text into clipboard */
-      			navigator.clipboard.writeText
-      				("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3");
-      		}
+        const runAllScripts = () => {
+          initializeAllAccordions()
+        }
+
+        const listenForUrlChanges = () => {
+          let url = location.href
+          document.body.addEventListener(
+            'click',
+            () => {
+              requestAnimationFrame(() => {
+                if (url !== location.href) {
+                  runAllScripts()
+                  url = location.href
+                }
+              })
+            },
+            true
+          )
+        }
+
+        const initializeAllAccordions = () => {
+          const allAccordions = document.querySelectorAll('[data-role="Accordion"]');
+
+          allAccordions.forEach((accordion) => {
+              console.log("Accordion:", accordion)
+            const accordionHeader = accordion.querySelector('[data-type="accordion-header"]')
+            const accordionContent = accordion.querySelector('[data-type="accordion-content"]')
+
+            accordionHeader.addEventListener('click', () => {
+              if (accordionContent.style.maxHeight) {
+                accordionContent.style.maxHeight = ''
+              } else {
+                accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`
+              }
+            })
+          })
+        }
+
+        listenForUrlChanges()
+        runAllScripts()
+
+        const myFunc = (e) =>{
+            const myBtnElement = e.target
+            if(!myBtnElement){
+                return
+            }
+
+            navigator.clipboard.writeText(myBtnElement.innerText)
+      	  alert("Address Copied 📋")
+        }
+
+        document.getElementById('addy').addEventListener('click',myFunc)
+
+          const myFunc2 = (e2) =>{
+            const myBtnElement2 = e2.target
+            if(!myBtnElement2){
+                return
+            }
+
+            navigator.clipboard.writeText("0xef983589FC5af54a5f5864B0B01bac5BE69b04a3")
+      	  alert("Address Copied 📋")
+        }
+
+        document.getElementById('addy2').addEventListener('click',myFunc2)
+      }
     </script>
   </body>
 </html>
